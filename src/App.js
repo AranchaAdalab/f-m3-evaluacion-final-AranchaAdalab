@@ -15,6 +15,7 @@ class App extends React.Component {
     }
     this.getCharacters = this.getCharacters.bind(this);
     this.getInput = this.getInput.bind(this);
+    this.getReset = this.getReset.bind(this);
   }
 
   componentDidMount() {
@@ -40,6 +41,12 @@ class App extends React.Component {
     })
   }
 
+  getReset() {
+    this.setState ({
+      inputValue: ''
+    })
+  }
+
   render() {
     return (
       <div className="App">
@@ -52,7 +59,7 @@ class App extends React.Component {
             />
             } />
             <Route path="/characterCard/:id" render={routerProps => (
-                <CharacterCard match={routerProps.match} arrList={this.state.arrList} />
+                <CharacterCard match={routerProps.match} arrList={this.state.arrList} getReset={this.getReset}/>
               )} />
           </Switch>
         </main>

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 class CharacterCard extends React.Component {
     render() {
-        const { arrList } = this.props;
+        const { arrList, getReset } = this.props;
         const potterId = this.props.match.params.id;
         const potterPrint = arrList.find(item => item.id === potterId)
         return (
@@ -17,8 +17,8 @@ class CharacterCard extends React.Component {
                         <p className="patronus">Patronus: {potterPrint.patronus}</p>
                         <p className="alive">Estado: {potterPrint.alive === true ? 'vivo' : 'muerto'}</p>
                     </div>
-                    : <p>nada</p>}
-                <Link to="/">Volver al listado de personajes</Link>
+                    : <p>Cargando</p>}
+                <Link onClick={getReset} to="/">Volver al listado de personajes</Link>
             </React.Fragment>
         )
     }
