@@ -8,7 +8,6 @@ class Filters extends React.Component {
                 <label htmlFor="inputPotter">Busca por nombre</label>
                 <input name="inputPotter" className="input" type="text" onChange={getInput}/>
             </React.Fragment>
-
         )
     }
 }

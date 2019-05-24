@@ -1,7 +1,16 @@
 .character_list {
     list-style: none;
+    display: flex;
+    flex-wrap: wrap;
   }
   
-  .character_image {
-    width: 100px;
-  }
+.character {
+  width: 150px;
+  background-color: rgb(245, 245, 145);
+  border: solid 1px black;
+  margin: 10px;
+}
+
+.character_image {
+  height: 150px;
+}
