@@ -2,7 +2,7 @@ import React from 'react';
 import Home from './components/Home';
 import CharacterCard from './components/CharacterCard';
 import { fetchPotter } from './components/Petition';
-import {Route, Switch} from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import './App.scss';
 
 class App extends React.Component {
@@ -26,7 +26,8 @@ class App extends React.Component {
     fetchPotter()
       .then(data => {
         const newArr = data.map((character, index) => {
-          return {...character, id: `hogwartsid-${index}`};
+          const patronus = character.patronus.charAt(0).toUpperCase() + character.patronus.slice(1)
+          return { ...character, id: `hogwartsid-${index}`, patronus: patronus };
         });
         this.setState({
           arrList: newArr,
@@ -42,27 +43,26 @@ class App extends React.Component {
   }
 
   getReset() {
-    this.setState ({
+    this.setState({
       inputValue: ''
     })
   }
 
   render() {
+
     return (
       <div className="App">
-        <main>
-          <Switch>
-            <Route exact path="/" render={() => <Home
-              arrList={this.state.arrList}
-              inputValue={this.state.inputValue}
-              getInput={this.getInput}
-            />
-            } />
-            <Route path="/characterCard/:id" render={routerProps => (
-                <CharacterCard match={routerProps.match} arrList={this.state.arrList} getReset={this.getReset}/>
-              )} />
-          </Switch>
-        </main>
+        <Switch>
+          <Route exact path="/" render={() => <Home
+            arrList={this.state.arrList}
+            inputValue={this.state.inputValue}
+            getInput={this.getInput}
+          />
+          } />
+          <Route path="/characters/:id" render={routerProps => (
+            <CharacterCard match={routerProps.match} arrList={this.state.arrList} getReset={this.getReset} />
+          )} />
+        </Switch>
       </div>
     );
   }

@@ -6,8 +6,13 @@ class Home extends React.Component {
     render() {
         return (
             <React.Fragment>
-                <Filters getInput={this.props.getInput} />
-                <CharacterList arrList={this.props.arrList} inputValue={this.props.inputValue} />
+                {this.props.arrList && this.props.arrList.length ?
+                    <React.Fragment>
+                        <Filters getInput={this.props.getInput} />
+                        <CharacterList arrList={this.props.arrList} inputValue={this.props.inputValue} />
+                    </React.Fragment>
+                    : <p>Cargando datos</p>
+                }
             </React.Fragment>
 
         )
