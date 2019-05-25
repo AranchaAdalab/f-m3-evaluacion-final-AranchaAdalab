@@ -1,0 +1,43 @@
+.character_detail {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border: solid blanchedalmond 1px;
+}
+
+.details {
+    color: blanchedalmond;
+    font-family: 'Jolly Lodger';
+    font-size: 22px;
+}
+
+.character_image {
+    margin-right: 29px;
+}
+
+.character_name {
+    margin: 5px;
+}
+
+.character_house {
+    margin: 5px;
+}
+
+.character_birth {
+    margin: 5px;
+}
+
+.character_patronus {
+    margin: 5px;
+}
+
+.character_alive {
+    margin: 5px;
+}
+
+.back {
+    text-decoration: none;
+    color: blanchedalmond;
+    font-style: oblique;
+}

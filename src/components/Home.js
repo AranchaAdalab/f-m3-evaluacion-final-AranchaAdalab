@@ -1,6 +1,7 @@
 import React from 'react';
 import CharacterList from './CharacterList';
 import Filters from './Filters';
+import '../stylesheets/Home.scss';
 
 class Home extends React.Component {
     render() {
@@ -10,6 +11,7 @@ class Home extends React.Component {
                     <React.Fragment>
                         <Filters getInput={this.props.getInput} />
                         <CharacterList arrList={this.props.arrList} inputValue={this.props.inputValue} />
+                        <img className="logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Harry_Potter_wordmark.svg/2180px-Harry_Potter_wordmark.svg.png" alt=""></img>
                     </React.Fragment>
                     : <p>Cargando datos</p>
                 }

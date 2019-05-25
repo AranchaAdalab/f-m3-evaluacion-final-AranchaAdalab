@@ -6,11 +6,32 @@
   
 .character {
   width: 150px;
-  background-color: rgb(245, 245, 145);
+  background-color: rgba(131, 6, 6, 0.562);
   border: solid 1px black;
+  border-radius: 3px;
   margin: 10px;
 }
 
 .character_image {
   height: 150px;
+}
+
+.character_name {
+  font-family: 'Jolly Lodger';
+  font-weight: 200;
+  color: blanchedalmond;
+}
+
+.character_house {
+  font-family: 'Jolly Lodger';
+  font-weight: 100;
+  font-size: 22px;
+  color: black;
+}
+
+.fa-hat-wizard {
+  color: blanchedalmond;
+  font-size: 22px;
+  margin-bottom: 10px;
+  text-decoration: none;
 }

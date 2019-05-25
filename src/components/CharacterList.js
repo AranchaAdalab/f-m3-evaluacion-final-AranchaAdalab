@@ -17,7 +17,7 @@ class CharacterList extends React.Component {
                                     <img className="character_image" src={character.image} alt="" />
                                     <h2 className="character_name">{character.name}</h2>
                                     <p className="character_house">{character.house}</p>
-                                    <Link to={`/characters/${character.id}`}>Más info</Link>
+                                    <Link to={`/characters/${character.id}`}><i class="fas fa-hat-wizard"></i></Link>
                                 </li>
                             )
                         })}
