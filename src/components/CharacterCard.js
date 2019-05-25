@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import '../stylesheets/CharacterCard.scss';
+import Hufflepuff from '../images/hufflepuff.png';
 
 class CharacterCard extends React.Component {
     render() {
@@ -14,13 +15,13 @@ class CharacterCard extends React.Component {
             <React.Fragment>
                 {potterPrint ?
                     <div className="character_detail">
-                        <img className="character_image" src={potterPrint.image} alt="" />
+                        <img className="character_detail_image" src={potterPrint.image} alt="" />
                         <div className="details">
-                            <h2 className="character_name">{potterPrint.name}</h2>
-                            {house !== '' ? <p className="character_house">Casa: {house}</p> : ''}
-                            {birth !== '' ? <p className="character_birth">Nacimiento: {birth}</p> : ''}
-                            {patronus !== '' ? <p className="character_patronus">Patronus: {patronus}</p> : ''}
-                            <p className="character_alive">Estado: {potterPrint.alive === true ? 'VIVO' : 'MUERTO'}</p>
+                            <h2 className="character_detail_name">{potterPrint.name}</h2>
+                {house !== '' ? <p className="character_detail_house">Casa {house === 'Hufflepuff' ? <img className="chest" src={Hufflepuff} alt="" /> : ''} {house === 'Gryffindor' ? 'Gryffindor' : ''}</p> : ''}
+                            {birth !== '' ? <p className="character_detail_birth">Nacimiento: {birth}</p> : ''}
+                            {patronus !== '' ? <p className="character_detail_patronus">Patronus: {patronus}</p> : ''}
+                            <p className="character_detail_alive">Estado: {potterPrint.alive === true ? 'VIVO' : 'MUERTO'}</p>
                         </div>
                     </div>
                     : <p>Cargando datos</p>}

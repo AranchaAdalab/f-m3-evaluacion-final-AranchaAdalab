@@ -1,6 +1,7 @@
 import React from 'react';
 import '../stylesheets/CharacterList.scss';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import Hat from '../images/hat.png';
 
 class CharacterList extends React.Component {
 
@@ -14,10 +15,12 @@ class CharacterList extends React.Component {
                         .map(character => {
                             return (
                                 <li className="character" key={character.id}>
-                                    <img className="character_image" src={character.image} alt="" />
+                                    <div className="character_image_container">
+                                        <img className="character_image" src={character.image} alt="" />
+                                    </div>
                                     <h2 className="character_name">{character.name}</h2>
                                     <p className="character_house">{character.house}</p>
-                                    <Link to={`/characters/${character.id}`}><i class="fas fa-hat-wizard"></i></Link>
+                                    <Link to={`/characters/${character.id}`}><img className="hat" src={Hat} alt=""/></Link>
                                 </li>
                             )
                         })}

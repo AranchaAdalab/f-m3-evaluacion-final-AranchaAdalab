@@ -1,9 +1,12 @@
 .character_detail {
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 30px;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    border: solid blanchedalmond 1px;
+    // border: solid blanchedalmond 1px;
 }
 
 .details {
@@ -12,27 +15,32 @@
     font-size: 22px;
 }
 
-.character_image {
+.character_detail_image {
     margin-right: 29px;
+    width: 150px;
 }
 
-.character_name {
+.character_detail_name {
     margin: 5px;
 }
 
-.character_house {
+.character_detail_house {
     margin: 5px;
 }
 
-.character_birth {
+.chest {
+    width: 50px;
+}
+
+.character_detail_birth {
     margin: 5px;
 }
 
-.character_patronus {
+.character_detail_patronus {
     margin: 5px;
 }
 
-.character_alive {
+.character_detail_alive {
     margin: 5px;
 }
 
