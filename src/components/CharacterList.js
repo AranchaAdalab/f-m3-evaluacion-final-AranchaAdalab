@@ -16,7 +16,7 @@ class CharacterList extends React.Component {
                             return (
                                 <li className="character" key={character.id}>
                                     <div className="character_image_container">
-                                        <img className="character_image" src={character.image} alt="" />
+                                        <img className="character_image" src={character.image} alt={character.name} />
                                     </div>
                                     <h2 className="character_name">{character.name}</h2>
                                     <p className="character_house">{character.house}</p>

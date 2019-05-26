@@ -2,15 +2,15 @@
     list-style: none;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    width: 100%;
-    padding: 0 10px 0 10px;
+    width: 100vw;
+    padding: 0;
     @media all and (min-width:468px) {
       grid-template-columns: 1fr 1fr 1fr;
     }
-    @media all and (min-width:668px) {
+    @media all and (min-width:768px) {
       grid-template-columns: 1fr 1fr 1fr 1fr;
     }
-    @media all and (min-width:868px) {
+    @media all and (min-width:1024px) {
       grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     }
   }
@@ -18,7 +18,7 @@
 .character {
   grid-column: span 1;
   justify-self: center;
-  width: 150px;
+  width: 120px;
   height: 400px;
   background-color: rgba(131, 6, 6, 0.699);
   border: solid 1px black;
@@ -29,14 +29,27 @@
   align-items: center;
   justify-content: flex-start;
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.29), 1px 1px 1px rgba(92, 91, 91, 0.44);
+  @media all and (min-width:468px) {
+    width: 150px;
+  }
+  @media all and (min-width:768px) {
+    width: 170px;
+  }
+  @media all and (min-width:1024px) {
+    width: 190px;
+  }
 }
 
 .character_image_container {
-  width: 150px;
-  height: 230px;
+  width: 120px;
+  height: 200px;
   overflow: hidden;
   display: flex;
   justify-content: center;
+  @media all and (min-width:468px) {
+    width: 150px;
+    height: 230px;;
+  }
 }
 
 .character_image {

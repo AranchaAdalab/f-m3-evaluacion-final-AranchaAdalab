@@ -1,3 +1,32 @@
-.logo {
-    width: 190px;
+.logo_footer {
+    width: 150px;
+    filter: drop-shadow(5px 5px 10px rgb(219, 215, 215));
+    margin-bottom: 20px;
+    margin-top: 20px;
+    @media all and (min-width:768px) {
+        width: 190px;
+    }
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    color: black;
+    font-family: 'Jolly Lodger';
+    font-weight: 200;
+    font-size: 26px;
+    @media all and (min-width:768px) {
+        font-size: 36px;
+    }
+}
+
+.logo_header {
+    width: 130px;
+    filter: drop-shadow(5px 5px 10px rgb(219, 215, 215));
+    margin-left: 10px;
+    @media all and (min-width:768px) {
+        width: 190px;
+    }
 }

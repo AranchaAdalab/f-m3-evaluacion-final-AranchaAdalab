@@ -15,13 +15,14 @@ class CharacterCard extends React.Component {
         const birth = potterPrint.yearOfBirth;
         const house = potterPrint.house;
         const alive = potterPrint.alive;
+        const name = potterPrint.name;
         return (
             <div className="character_and_link">
                 {potterPrint ?
                     <div className="character_detail">
-                        <img className={`character_detail_image ${alive === false ? 'death' : ''}`} src={potterPrint.image} alt="" />
+                        <img className={`character_detail_image ${alive === false ? 'death' : ''}`} src={potterPrint.image} alt={name} />
                         <div className="details">
-                            <h2 className="character_detail_name">{potterPrint.name}</h2>
+                            <h2 className="character_detail_name">{name}</h2>
                             {house !== '' ? <p className="character_detail_house">Casa
                                 {house === 'Hufflepuff' ? <img className="crest" src={Hufflepuff} alt="" /> : ''}
                                 {house === 'Gryffindor' ? <img className="crest" src={Gryffindor} alt="" /> : ''}
