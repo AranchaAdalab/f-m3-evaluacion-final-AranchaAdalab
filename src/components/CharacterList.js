@@ -1,10 +1,10 @@
 import React from 'react';
-import '../stylesheets/CharacterList.scss';
 import { Link } from 'react-router-dom';
 import Hat from '../images/hat.png';
+import '../stylesheets/CharacterList.scss';
+import PropTypes from 'prop-types';
 
 class CharacterList extends React.Component {
-
     render() {
         const { arrList, inputValue } = this.props;
         return (
@@ -25,11 +25,17 @@ class CharacterList extends React.Component {
                                     </div>
                                 </li>
                             )
-                        })}
+                        })
+                    }
                 </ul>
             </React.Fragment>
         )
     }
 }
+
+CharacterList.propTypes = {
+    arrList: PropTypes.array,
+    inputValue: PropTypes.string,
+};
 
 export default CharacterList;

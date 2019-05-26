@@ -1,8 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Hogwarts from '../images/Hogwartscrest.png';
 import Hat from '../images/hat.png';
-import { Link } from 'react-router-dom';
 import '../stylesheets/Header.scss';
+import PropTypes from 'prop-types';
 
 class Header extends React.Component {
     render() {
@@ -21,5 +22,9 @@ class Header extends React.Component {
         )
     }
 }
+
+Header.propTypes = {
+    getReset: PropTypes.func,
+};
 
 export default Header; 

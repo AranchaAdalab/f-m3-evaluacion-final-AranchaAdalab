@@ -1,5 +1,6 @@
 import React from 'react';
 import '../stylesheets/Filters.scss';
+import PropTypes from 'prop-types';
 
 class Filters extends React.Component {
     render() {
@@ -14,5 +15,9 @@ class Filters extends React.Component {
         )
     }
 }
+
+Filters.propTypes = {
+    getInput: PropTypes.func,
+};
 
 export default Filters;

@@ -6,7 +6,6 @@ import { Route, Switch } from 'react-router-dom';
 import './App.scss';
 
 class App extends React.Component {
-
   constructor(props) {
     super(props);
     this.state = {
@@ -49,19 +48,19 @@ class App extends React.Component {
   }
 
   render() {
-
+    const { arrList, inputValue } = this.state;
     return (
       <div className="App">
         <Switch>
           <Route exact path="/" render={() => <Home
-            arrList={this.state.arrList}
-            inputValue={this.state.inputValue}
+            arrList={arrList}
+            inputValue={inputValue}
             getInput={this.getInput}
             getReset={this.getReset}
           />
           } />
           <Route path="/characters/:id" render={routerProps => (
-            <CharacterCard match={routerProps.match} arrList={this.state.arrList} getReset={this.getReset} />
+            <CharacterCard match={routerProps.match} arrList={arrList} getReset={this.getReset} />
           )} />
         </Switch>
       </div>
