@@ -1,0 +1,88 @@
+.header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: solid 1px black;
+    padding: 10px 10px 0 10px;
+    @media all and (min-width:768px) {
+        padding: 25px 10px 0 10px;
+    }
+}
+
+.crest_school {
+    height: 50px;
+    margin-right: 15px;
+    transition: filter ease 0.5s;
+    &:hover {
+        filter: drop-shadow(5px 5px 10px rgb(219, 215, 215));
+    }
+    @media all and (min-width:668px) {
+        height: 70px;
+    }
+    @media all and (min-width:1024px) {
+        height: 100px;
+    }
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    color: black;
+    filter: drop-shadow(5px 5px 10px rgb(219, 215, 215));
+    font-family: 'Jolly Lodger';
+    font-weight: 200;
+    font-size: 22px;
+    @media all and (min-width:668px) {
+        font-size: 30px;
+    }
+    @media all and (min-width:1024px) {
+        font-size: 36px;
+    }
+}
+
+.logo_header {
+    width: 100px;
+    filter: drop-shadow(5px 5px 10px rgb(219, 215, 215));
+    margin-left: 10px;
+    @media all and (min-width:668px) {
+        width: 150px;
+    }
+    @media all and (min-width:1024px) {
+        width: 190px;
+    }
+}
+
+.hat_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hat_header {
+    height: 30px;
+    margin-bottom: 10px;
+    text-decoration: none;
+    transition: filter ease 0.5s;
+    filter: drop-shadow(5px 5px 10px rgb(219, 215, 215));
+    @media all and (min-width:668px) {
+        height: 40px;
+      }
+    @media all and (min-width:1024px) {
+        height: 50px;
+    }
+}
+
+.mas_info {
+    font-family: 'Jolly Lodger';
+    font-size: 12px;
+    margin-left: 15px;
+    color: blanchedalmond;
+    @media all and (min-width:668px) {
+        font-size: 20px;
+      }
+    @media all and (min-width:1024px) {
+        font-size: 24px;
+    }
+}

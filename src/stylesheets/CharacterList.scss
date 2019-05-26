@@ -28,6 +28,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
+  position: relative;
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.29), 1px 1px 1px rgba(92, 91, 91, 0.44);
   @media all and (min-width:468px) {
     width: 150px;
@@ -38,6 +39,11 @@
   @media all and (min-width:1024px) {
     width: 190px;
   }
+}
+
+.house_and_hat {
+  position: absolute;
+  bottom: 10px;
 }
 
 .character_image_container {
