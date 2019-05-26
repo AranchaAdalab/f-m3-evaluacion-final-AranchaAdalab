@@ -24,6 +24,10 @@
     margin-left: 15px;
 }
 
-.crest {
+.crest_school {
     height: 100px;
+    transition: filter ease 0.5s;
+    &:hover {
+        filter: drop-shadow(5px 5px 10px rgb(219, 215, 215));
+    }
 }

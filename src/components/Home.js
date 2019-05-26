@@ -9,7 +9,7 @@ class Home extends React.Component {
             <React.Fragment>
                 {this.props.arrList && this.props.arrList.length ?
                     <React.Fragment>
-                        <Filters getInput={this.props.getInput} />
+                        <Filters getInput={this.props.getInput} getReset={this.props.getReset}/>
                         <CharacterList arrList={this.props.arrList} inputValue={this.props.inputValue} />
                         <img className="logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Harry_Potter_wordmark.svg/2180px-Harry_Potter_wordmark.svg.png" alt=""></img>
                     </React.Fragment>

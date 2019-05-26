@@ -57,6 +57,7 @@ class App extends React.Component {
             arrList={this.state.arrList}
             inputValue={this.state.inputValue}
             getInput={this.getInput}
+            getReset={this.getReset}
           />
           } />
           <Route path="/characters/:id" render={routerProps => (

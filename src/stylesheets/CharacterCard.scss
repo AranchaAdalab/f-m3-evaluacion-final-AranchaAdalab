@@ -1,18 +1,21 @@
+.character_and_link {
+    display: inline-flex;
+    flex-direction: column;
+}
+
 .character_detail {
-    width: 100%;
     margin-top: 20px;
     margin-bottom: 30px;
-    display: flex;
-    flex-direction: row;
+    display: inline-flex;
     align-items: center;
-    justify-content: center;
-    // border: solid blanchedalmond 1px;
+    border: solid blanchedalmond 1px;
 }
 
 .details {
     color: blanchedalmond;
     font-family: 'Jolly Lodger';
     font-size: 22px;
+    margin-right: 29px;
 }
 
 .character_detail_image {
@@ -20,16 +23,25 @@
     width: 150px;
 }
 
+.death {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+
 .character_detail_name {
-    margin: 5px;
+    margin: 0;
 }
 
 .character_detail_house {
     margin: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.chest {
+.crest {
     width: 50px;
+    margin-left: 10px;
 }
 
 .character_detail_birth {
@@ -41,11 +53,17 @@
 }
 
 .character_detail_alive {
-    margin: 5px;
+    margin: 0;
 }
 
 .back {
     text-decoration: none;
     color: blanchedalmond;
     font-style: oblique;
+    margin-bottom: 10px;
+}
+
+.fas {
+    color: blanchedalmond;
+    margin-left: 7px;
 }
