@@ -19,10 +19,13 @@
 }
 
 .details {
-    color: blanchedalmond;
+    color: rgb(10, 10, 10);
     font-family: 'Jolly Lodger';
     font-size: 22px;
     margin-right: 29px;
+    @media all and (min-width:768px) {
+        color: blanchedalmond;
+    }
 }
 
 .character_detail_image {
