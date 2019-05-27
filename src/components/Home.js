@@ -2,6 +2,7 @@ import React from 'react';
 import CharacterList from './CharacterList';
 import Filters from './Filters';
 import Header from './Header';
+import Hogwarts from '../images/hogwarts.jpg';
 import '../stylesheets/Home.scss';
 import PropTypes from 'prop-types';
 
@@ -10,6 +11,7 @@ class Home extends React.Component {
         const { arrList, getReset, getInput, inputValue } = this.props;
         return (
             <React.Fragment>
+                <img className="castle" src={Hogwarts} alt=""/>
                 {arrList && arrList.length ?
                     <React.Fragment>
                         <Header getReset={getReset} />

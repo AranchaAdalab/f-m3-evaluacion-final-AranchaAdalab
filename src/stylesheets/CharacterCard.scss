@@ -1,3 +1,10 @@
+.castle {
+    z-index: -1;
+    position: fixed;
+    left: -50px;
+    height: 100vh;
+}
+
 .character_and_link {
     display: inline-flex;
     flex-direction: column;
@@ -61,7 +68,7 @@
     font-family: 'Jolly Lodger';
     color: blanchedalmond;
     font-style: oblique;
-    margin-bottom: 10px;
+    padding-top: 10px;
     font-size: 14px;
     @media all and (min-width:668px) {
         font-size: 20px;
@@ -69,6 +76,11 @@
     @media all and (min-width:1024px) {
         font-size: 24px;
     }
+}
+
+.back_link {
+    display: flex;
+    flex-direction: column;
 }
 
 .fas {
