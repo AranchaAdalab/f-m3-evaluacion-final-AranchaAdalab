@@ -5,7 +5,6 @@ import Hufflepuff from '../images/hufflepuff.png';
 import Gryffindor from '../images/Gryffindor.png';
 import Slytherin from '../images/Slytherin.png';
 import Ravenclaw from '../images/Ravenclaw.png';
-import Hogwarts from '../images/hogwarts.jpg';
 import '../stylesheets/CharacterCard.scss';
 import PropTypes from 'prop-types';
 
@@ -22,7 +21,6 @@ class CharacterCard extends React.Component {
         const alive = potterPrint.alive;
         return (
             <React.Fragment>
-                <img className="castle" src={Hogwarts} alt="" />
                 <Header />
                 <div className="character_and_link">
                     {potterPrint ?

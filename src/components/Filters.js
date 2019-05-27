@@ -4,12 +4,25 @@ import PropTypes from 'prop-types';
 
 class Filters extends React.Component {
     render() {
-        const { getInput } = this.props;
+        const { getInput, getSelect } = this.props;
         return (
             <React.Fragment>
-                <div className="input_container">
-                    <label className="label_input" htmlFor="inputPotter">¿A quién buscas? <i class="fa fa-bolt"></i></label>
-                    <input name="inputPotter" className="input" type="text" onChange={getInput} />
+                <div className="filters_container">
+                    <div className="input_container">
+                        <label className="label_input" htmlFor="inputPotter">¿A quién buscas? <i class="fa fa-bolt"></i></label>
+                        <input name="inputPotter" className="input" type="text" onChange={getInput} />
+                    </div>
+                    <div className="input_container">
+                        <label className="label_input" htmlFor="house_select">Casa</label>
+                        <select className="input" id="house_select" name="house_select" onChange={getSelect}>
+                            <option value="">Todas</option>
+                            <option value="Gryffindor">Gryffindor</option>
+                            <option value="Hufflepuff">Hufflepuff</option>
+                            <option value="Ravenclaw">Ravenclaw</option>
+                            <option value="Slytherin">Slytherin</option>
+                            <option value="Ninguna">Ninguna</option>
+                        </select>
+                    </div>
                 </div>
             </React.Fragment>
         )
@@ -18,6 +31,7 @@ class Filters extends React.Component {
 
 Filters.propTypes = {
     getInput: PropTypes.func,
+    getSelect: PropTypes.func
 };
 
 export default Filters;

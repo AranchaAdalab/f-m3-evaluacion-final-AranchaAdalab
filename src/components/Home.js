@@ -2,21 +2,19 @@ import React from 'react';
 import CharacterList from './CharacterList';
 import Filters from './Filters';
 import Header from './Header';
-import Hogwarts from '../images/hogwarts.jpg';
 import '../stylesheets/Home.scss';
 import PropTypes from 'prop-types';
 
 class Home extends React.Component {
     render() {
-        const { arrList, getReset, getInput, inputValue } = this.props;
+        const { arrList, getReset, getInput, inputValue, selectValue, getSelect } = this.props;
         return (
             <React.Fragment>
-                <img className="castle" src={Hogwarts} alt=""/>
                 {arrList && arrList.length ?
                     <React.Fragment>
                         <Header getReset={getReset} />
-                        <Filters getInput={getInput} getReset={getReset} />
-                        <CharacterList arrList={arrList} inputValue={inputValue} />
+                        <Filters getInput={getInput} getSelect={getSelect}/>
+                        <CharacterList arrList={arrList} inputValue={inputValue} selectValue={selectValue}/>
                         <img className="logo_footer" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Harry_Potter_wordmark.svg/2180px-Harry_Potter_wordmark.svg.png" alt="logo"></img>
                     </React.Fragment>
                     : <p>Cargando datos</p>

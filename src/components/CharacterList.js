@@ -6,12 +6,13 @@ import PropTypes from 'prop-types';
 
 class CharacterList extends React.Component {
     render() {
-        const { arrList, inputValue } = this.props;
+        const { arrList, inputValue, selectValue } = this.props;
         return (
             <React.Fragment>
                 <ul className="character_list">
                     {arrList
                         .filter(character => character.name.toLowerCase().includes(inputValue.toLowerCase()))
+                        .filter(character => character.house.includes(selectValue))
                         .map(character => {
                             return (
                                 <li className="character" key={character.id}>
@@ -36,6 +37,7 @@ class CharacterList extends React.Component {
 CharacterList.propTypes = {
     arrList: PropTypes.array,
     inputValue: PropTypes.string,
+    selectValue: PropTypes.string
 };
 
 export default CharacterList;

@@ -10,11 +10,13 @@ class App extends React.Component {
     super(props);
     this.state = {
       arrList: [],
-      inputValue: ''
+      inputValue: '',
+      selectValue: ''
     }
     this.getCharacters = this.getCharacters.bind(this);
     this.getInput = this.getInput.bind(this);
     this.getReset = this.getReset.bind(this);
+    this.getSelect = this.getSelect.bind(this);
   }
 
   componentDidMount() {
@@ -26,7 +28,8 @@ class App extends React.Component {
       .then(data => {
         const newArr = data.map((character, index) => {
           const patronus = character.patronus.charAt(0).toUpperCase() + character.patronus.slice(1)
-          return { ...character, id: `hogwartsid-${index}`, patronus: patronus };
+          const house = character.house === '' ? 'Ninguna' : character.house
+          return { ...character, id: `hogwartsid-${index}`, patronus: patronus, house: house };
         });
         this.setState({
           arrList: newArr,
@@ -41,22 +44,32 @@ class App extends React.Component {
     })
   }
 
+  getSelect(event) {
+    const guilty = event.currentTarget.value;
+    this.setState({
+      selectValue: guilty
+    })
+  }
+
   getReset() {
     this.setState({
-      inputValue: ''
+      inputValue: '',
+      selectValue: ''
     })
   }
 
   render() {
-    const { arrList, inputValue } = this.state;
+    const { arrList, inputValue, selectValue } = this.state;
     return (
       <div className="App">
         <Switch>
           <Route exact path="/" render={() => <Home
             arrList={arrList}
             inputValue={inputValue}
+            selectValue={selectValue}
             getInput={this.getInput}
             getReset={this.getReset}
+            getSelect={this.getSelect}
           />
           } />
           <Route path="/characters/:id" render={routerProps => (
