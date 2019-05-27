@@ -2,7 +2,6 @@
     list-style: none;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    width: 100vw;
     padding: 0;
     @media all and (min-width:468px) {
       grid-template-columns: 1fr 1fr 1fr;
