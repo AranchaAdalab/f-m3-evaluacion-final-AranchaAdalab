@@ -21,7 +21,7 @@ class CharacterCard extends React.Component {
         const alive = potterPrint.alive;
         return (
             <React.Fragment>
-                <Header />
+                <Header getReset={getReset}/>
                 <div className="character_and_link">
                     {potterPrint ?
                         <div className="character_detail">
@@ -36,7 +36,7 @@ class CharacterCard extends React.Component {
                                 </p> : ''}
                                 {birth !== '' ? <p className="character_detail_birth">Nacimiento: {birth}</p> : ''}
                                 {patronus !== '' ? <p className="character_detail_patronus">Patronus: {patronus}</p> : ''}
-                                <p className="character_detail_alive">Estado {alive === true ? <i class="fas fa-book"></i> : <i class="fas fa-book-dead"></i>}</p>
+                                <p className="character_detail_alive">Estado {alive === true ? <i className="fas fa-book"></i> : <i className="fas fa-book-dead"></i>}</p>
                             </div>
                         </div>
                         : <p>Cargando datos</p>

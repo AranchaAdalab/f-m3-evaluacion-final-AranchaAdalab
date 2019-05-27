@@ -9,7 +9,10 @@ class Filters extends React.Component {
             <React.Fragment>
                 <div className="filters_container">
                     <div className="input_container">
-                        <label className="label_input" htmlFor="inputPotter">¿A quién buscas? <i class="fa fa-bolt"></i></label>
+                        <div className="label_container">
+                            <label className="label_input" htmlFor="inputPotter">¿A quién buscas?</label>
+                            <i className="fa fa-bolt"></i>
+                        </div>
                         <input name="inputPotter" className="input" type="text" onChange={getInput} />
                     </div>
                     <div className="input_container">
