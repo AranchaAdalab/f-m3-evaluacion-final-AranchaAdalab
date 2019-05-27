@@ -15,10 +15,11 @@
 .details {
     color: rgb(10, 10, 10);
     font-family: 'Jolly Lodger';
-    font-size: 22px;
+    font-size: 16px;
     margin-right: 29px;
     @media all and (min-width:768px) {
         color: blanchedalmond;
+        font-size: 22px;
     }
 }
 
