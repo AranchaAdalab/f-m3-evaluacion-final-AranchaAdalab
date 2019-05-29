@@ -39,7 +39,7 @@ class CharacterCard extends React.Component {
                                 <p className="character_detail_alive">Estado {alive === true ? <i className="fas fa-book"></i> : <i className="fas fa-book-dead"></i>}</p>
                             </div>
                         </div>
-                        : <p>Cargando datos</p>
+                        : <p className="loading">Cargando datos</p>
                     }
                     <div className="back_link">
                         <Link to="/" className="back">Volver a mi búsqueda</Link>

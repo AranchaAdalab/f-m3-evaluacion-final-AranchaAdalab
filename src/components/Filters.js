@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 class Filters extends React.Component {
     render() {
-        const { getInput, getSelect } = this.props;
+        const { getInput, getSelect, getBloodValue } = this.props;
         return (
             <React.Fragment>
                 <div className="filters_container">
@@ -26,6 +26,15 @@ class Filters extends React.Component {
                             <option value="Ninguna">Ninguna</option>
                         </select>
                     </div>
+                    <div className="input_container">
+                        <label className="label_input" htmlFor="house_select">Ancestry</label>
+                        <select className="input" id="house_select" name="house_select" onChange={getBloodValue}>
+                            <option value="">Todos</option>
+                            <option value="pure-blood">Pure-blood</option>
+                            <option value="half-blood">Half-blood</option>
+                            <option value="muggleborn">Muggleborn</option>
+                        </select>
+                    </div>
                 </div>
             </React.Fragment>
         )
@@ -34,7 +43,8 @@ class Filters extends React.Component {
 
 Filters.propTypes = {
     getInput: PropTypes.func,
-    getSelect: PropTypes.func
+    getSelect: PropTypes.func,
+    getBloodValue: PropTypes.func
 };
 
 export default Filters;

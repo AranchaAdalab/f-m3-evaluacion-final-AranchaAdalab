@@ -11,12 +11,14 @@ class App extends React.Component {
     this.state = {
       arrList: [],
       inputValue: '',
-      selectValue: ''
+      selectValue: '',
+      bloodValue:''
     }
     this.getCharacters = this.getCharacters.bind(this);
     this.getInput = this.getInput.bind(this);
     this.getReset = this.getReset.bind(this);
     this.getSelect = this.getSelect.bind(this);
+    this.getBloodValue = this.getBloodValue.bind(this);
   }
 
   componentDidMount() {
@@ -51,6 +53,13 @@ class App extends React.Component {
     })
   }
 
+  getBloodValue(event) {
+    const guilty = event.currentTarget.value;
+    this.setState({
+      bloodValue: guilty
+    })
+  }
+
   getReset() {
     this.setState({
       inputValue: '',
@@ -59,7 +68,7 @@ class App extends React.Component {
   }
 
   render() {
-    const { arrList, inputValue, selectValue } = this.state;
+    const { arrList, inputValue, selectValue, bloodValue } = this.state;
     return (
       <div className="App">
         <Switch>
@@ -67,9 +76,11 @@ class App extends React.Component {
             arrList={arrList}
             inputValue={inputValue}
             selectValue={selectValue}
+            bloodValue={bloodValue}
             getInput={this.getInput}
             getReset={this.getReset}
             getSelect={this.getSelect}
+            getBloodValue={this.getBloodValue}
           />
           } />
           <Route path="/characters/:id" render={routerProps => (
